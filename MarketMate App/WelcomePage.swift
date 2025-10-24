@@ -11,7 +11,7 @@ struct WelcomePage: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.green
+                Color.white
                 .opacity(0.20)
                 .ignoresSafeArea()
                 
@@ -19,13 +19,13 @@ struct WelcomePage: View {
                     // App Title
                     Text("MarketMate")
                         .font(.system(size: 50, weight: .bold, design: .rounded))
-                        .foregroundColor(.brown)
+                        .foregroundColor(.black)
                         .padding(.top, 80)
                     
                     // Overview
-                    Text("MarketMate helps you track, manage, and grow your market stall inventory easily. Add products, record sales, and view insights — all in one app!")
+                    Text("MarketMate is a simple, all-in-one inventory and sales management app designed to help small business owners, market stall vendors, and entrepreneurs.")
                         .font(.title3)
-                        .foregroundColor(.brown.opacity(0.9))
+                        .foregroundColor(.black.opacity(0.9))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 30)
                     
@@ -50,7 +50,7 @@ struct WelcomePage: View {
                         Text("Get Started")
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.brown
+                            .background(Color.blue
                                 .opacity(4.0))
                             .foregroundColor(.white)
                             .font(.headline)

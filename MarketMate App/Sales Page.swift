@@ -20,6 +20,7 @@ struct SalesView: View {
     @State private var productName = ""
     @State private var quantity = ""
     @State private var total = ""
+    @State private var tapped = false
     @State private var sales:  [Sale] = [
         Sale(productName: "Apples", quantity: 10, total: 15.0, date: Date()),
         Sale(productName: "Bananas", quantity: 5, total: 8.0, date: Date().addingTimeInterval(-86400))
@@ -33,6 +34,7 @@ struct SalesView: View {
                     Text("Record New Sale")
                         .font(.title2)
                         .fontWeight(.bold)
+                    
                     TextField("Product Name", text: $productName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
@@ -49,7 +51,7 @@ struct SalesView: View {
                         Text("Save Sale")
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.brown)
+                            .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         
@@ -92,11 +94,24 @@ struct SalesView: View {
                 }
             }
             .padding()
-            
+                        //MARK: VIEW REPORTS BUTTON
+                        NavigationLink(destination: ReportsView()) {
+                            Text("View Reports")
+                                .font(.headline)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 10)
+                        
+                        
+                    }
+            .navigationTitle("Sales")
         }
-        .navigationTitle("Sales")
-    }
-    private func addSale() {
+        private func addSale() {
             guard let qty = Int(quantity),
                   let price = Double(total),
                   !productName.isEmpty else { return }
@@ -109,8 +124,9 @@ struct SalesView: View {
             quantity = ""
             total = ""
         }
-    
-}
+        
+    }
+
 #Preview {
     SalesView()
 }

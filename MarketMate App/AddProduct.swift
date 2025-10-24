@@ -14,10 +14,6 @@ struct AddProductView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Text("Add New Product")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.top)
 
             TextField("Product Name", text: $productName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -37,7 +33,7 @@ struct AddProductView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.brown)
+                    .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
