@@ -141,7 +141,7 @@ struct ReportsView: View {
                         }) {
                             Label("Export PDF", systemImage: "doc.fill")
                                 .padding()
-                                .background(Color.brown)
+                                .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                         }

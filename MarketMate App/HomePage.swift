@@ -31,8 +31,8 @@ struct HomePage: View{
                             Spacer()
                             
                             
-                        //MARK: TWO WAY BINDING
-                        
+                            //MARK: TWO WAY BINDING
+                            
                             NavigationLink(destination: EditProfilePage(), isActive: $isTaped) {
                                 Image(systemName: "person.crop.circle.fill")
                                     .resizable()

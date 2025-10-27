@@ -25,7 +25,7 @@ struct ChangePasswordView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
-                        .padding(.top, 40)
+                        .padding(.top, 5)
                     
                     VStack(spacing: 20) {
                         SecureField(" Current Password", text: $currentPassword)
